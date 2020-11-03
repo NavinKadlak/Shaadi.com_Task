@@ -1,0 +1,2 @@
+rootProject.name='Shaadi.com Task'
+include ':app'

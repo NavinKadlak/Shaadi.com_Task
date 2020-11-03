@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.0"
+
+    defaultConfig {
+        applicationId "com.navinkadlak.shaadicomtask"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    //define versions
+    def support_version = "27.0.2"
+    def room_version = "2.2.5"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //Retrofit 2 and Gson
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.google.code.gson:gson:2.2.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+
+
+    //add these libraries
+    //support design
+    implementation 'com.google.android.material:material:1.0.0'
+
+    //card view
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    //recyclerview
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+
+    //room
+    implementation 'androidx.room:room-runtime:2.2.5'
+    implementation 'androidx.room:room-rxjava2:2.2.5'
+
+    annotationProcessor 'androidx.room:room-compiler:2.2.5'
+
+
+}

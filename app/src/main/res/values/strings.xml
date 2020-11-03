@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Shaadi.com Task</string>
+    <string name="memberAccepted">Member Accepted</string>
+    <string name="memberDecline">Member Decline</string>
+</resources>
